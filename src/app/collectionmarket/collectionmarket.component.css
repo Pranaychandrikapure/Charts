@@ -1,0 +1,7 @@
+echarts {
+    display: block;
+    width: 100%;
+    height: 80%;  /* Set a fixed height */
+    min-height: 400px; /* Avoid zero height issues */
+  }
+  

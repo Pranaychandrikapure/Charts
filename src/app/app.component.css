@@ -1,0 +1,31 @@
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .chart {
+    flex: 1 1 300px; /* Allows flexibility and responsiveness */
+    max-width: 50%;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow effect */
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* For Small Screens (Mobile View) */
+  @media (max-width: 768px) {
+    .chart-container {
+      flex-direction: column; /* Stacks the charts vertically */
+      align-items: center;
+    }
+  
+    .chart {
+      width: 90%; /* Makes sure it takes most of the screen width */
+    }
+  }
+  
