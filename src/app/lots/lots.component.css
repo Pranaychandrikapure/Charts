@@ -106,3 +106,8 @@
 .card .card-footer.down {
     color: #ef4444;
 }
+.component-graph{
+    width: 80%;
+    height: 400px;
+    overflow: hidden;
+}

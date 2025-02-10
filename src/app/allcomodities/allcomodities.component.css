@@ -1,8 +1,8 @@
 
   echarts {
     display: block;
-    width: 45rem;
-    height: 100%;  /* Set a fixed height */
+    width: 50rem;
+    height: 45%;  /* Set a fixed height */
     min-height: 100%; /* Avoid zero height issues */
+    overflow: hidden;
   }
-  

@@ -5,35 +5,46 @@ import { NgxEchartsModule } from 'ngx-echarts';
 @Component({
   selector: 'app-allcomodities',
   standalone: true,
-  imports: [NgxEchartsModule,RouterOutlet],
+  imports: [NgxEchartsModule, RouterOutlet],
   templateUrl: './allcomodities.component.html',
   styleUrl: './allcomodities.component.css'
 })
 export class AllcomoditiesComponent {
   chartOptions = {
+
+    title: {
+      text: 'Top 10 Commodities',
+      left: 'center',
+      top: 5,
+      textStyle: {
+        color: '#000',
+        size:'50px',
+      }
+    },
     tooltip: {
       trigger: 'item'
     },
     legend: {
-      orient: 'vertical', 
-      left: '1%', 
-      top: '10%',
-      itemGap: 11, // Increase gap between items
-      backgroundColor: '#f0f0f0', // Optional: Add background for clarity
-      padding: [20, 50, 20, 20], // Apply padding inside the legend container
-      borderRadius: 10, // Optional: Rounded edges
-      borderColor: '#ccc', // Optional: Border color
-      borderWidth: 0, // Optional: Border width
+      orient: 'vertical',
+      left: "60%", // Moves the legend to the left
+      top: '30%', // Centers it vertically
+      itemGap: 6,
+      backgroundColor: '#f0f0f0',
+      padding: [20, 20, 10, 10],
+      borderRadius: 5,
+      borderColor: '#ccc',
+      borderWidth: 1
     },
     series: [
       {
         name: 'Access From',
         type: 'pie',
         radius: ['35%', '60%'],
+        center: ['35%', '60%'], // Moves the pie chart towards the left
         avoidLabelOverlap: false,
         label: {
           show: false,
-          position: 'left'
+          position: 'right',
         },
         emphasis: {
           label: {
@@ -64,15 +75,13 @@ export class AllcomoditiesComponent {
         type: 'image',
         id: 'logo',
         style: {
-          image: "../../assets/umplogo1.jpg", 
-          width: 90, 
-          height: 90, 
+          image: "../../assets/umplogo1.jpg",
+          width: 100,
+          height: 100,
         },
-        left: 'center',
-        top: 'center',
+        left: '29%',
+        top: '46%',
       }
     ]
   };
-  
-
 }
