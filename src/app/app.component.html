@@ -1,14 +1,49 @@
-<div class="chart-container">
-  <app-barchart class="chart"></app-barchart>
-  <app-horizantalbar class="chart"></app-horizantalbar>
+<app-lots></app-lots>
+<div class="container">
+  <div class="header" (click)="toggleContent()">
+    <div class="title">
+      <i class="fas fa-info-circle"></i>
+      <span>Lots Details</span>
+    </div>
+    <i [ngClass]="isContentVisible ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
+  </div>
+  <div class="content" *ngIf="isContentVisible">
+    <div class="chart-container">
+      <app-barchart class="chart"></app-barchart>
+      <app-horizantalbar class="chart"></app-horizantalbar>
+    </div>
+  </div>
 </div>
-<div class="chart-container">
-  <app-piechart class="chart"></app-piechart>
-  <app-legendsgraph class="chart"></app-legendsgraph>
+<div class="container">
+  <div class="header" (click)="toggleContent()">
+    <div class="title">
+      <i class="fas fa-info-circle"></i>
+      <span>Lots Details</span>
+    </div>
+    <i [ngClass]="isContentVisible ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
+  </div>
+  <div class="content" *ngIf="isContentVisible">
+    <div class="chart-container">
+      <app-piechart class="chart"></app-piechart>
+      <app-legendsgraph class="chart"></app-legendsgraph>
+    </div>
+  </div>
 </div>
-<div class="chart-container">
-  <app-collectionmarket class="chart"></app-collectionmarket>
-  <!-- <app-legendsgraph class="chart"></app-legendsgraph> -->
+
+<div class="container">
+  <div class="header" (click)="toggleContent()">
+    <div class="title">
+      <i class="fas fa-info-circle"></i>
+      <span>Lots Details</span>
+    </div>
+    <i [ngClass]="isContentVisible ? 'fas fa-chevron-up' : 'fas fa-chevron-down'"></i>
+  </div>
+  <div class="content" *ngIf="isContentVisible">
+    <div class="chart-container">
+      <app-collectionmarket class="chart"></app-collectionmarket>
+    </div>
+  </div>
 </div>
+
 
 <router-outlet></router-outlet>

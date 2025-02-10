@@ -10,6 +10,13 @@ import { NgxEchartsModule } from 'ngx-echarts';
   styleUrls: ['./collectionmarket.component.css']
 })
 export class CollectionmarketComponent {
+  indicationValues = [
+    { name: 'Rice', value: 2 },
+    { name: 'Sugar', value: 1.2 },
+    { name: 'Bajara', value: 2.4 },
+    { name: 'Coffee Beans', value: 3.6 }
+  ];
+
   chartOptions = {
     polar: {
       show: false,
@@ -21,30 +28,29 @@ export class CollectionmarketComponent {
     },
     radiusAxis: {
       type: 'category',
-      data: ["54.1%", "31.1%", "54.1%"]
+      data: ["54.1", "31.1", "54.1"]
     },
-    tooltip: {},
     series: [
       {
         type: 'bar',
-        data: [
-          { value: 2, itemStyle: { color: this.getGradientColor('#E1FC73', '#6E991E') } }, // Light to Medium Green
-          { value: 1.2, itemStyle: { color: this.getGradientColor('#6E991E', '#2C3805') } }, // Medium to Dark Green
-          { value: 2.4, itemStyle: { color: this.getGradientColor('#2C3805', '#1B2404') } }, // Dark to Deepest Green
-          { value: 3.6, itemStyle: { color: this.getGradientColor('#1B2404', '#0F1402') } }  // Darkest Variation
-        ],
+        data: this.indicationValues.map(item => ({
+          value: item.value,
+          name: item.name,
+          itemStyle: { color: this.getGradientColor('#E1FC73', '#6E991E') }
+        })),
         coordinateSystem: 'polar',
         label: {
-          show: false,
-          position: 'middle',
+          show: true,
+          position: 'inside',
           formatter: '{b}: {c}',
-          color: '#2C3805' // Dark green for contrast
+          color: '#ffffff',
+          fontSize: 12,
+          fontWeight: 'bold'
         }
       }
     ]
   };
 
-  // Function to create gradient colors
   getGradientColor(color1: string, color2: string) {
     return {
       type: 'linear',
@@ -53,8 +59,8 @@ export class CollectionmarketComponent {
       x2: 1,
       y2: 1,
       colorStops: [
-        { offset: 0, color: color1 }, // Lighter shade at start
-        { offset: 1, color: color2 }  // Darker shade at end
+        { offset: 0, color: color1 },
+        { offset: 1, color: color2 }
       ]
     };
   }

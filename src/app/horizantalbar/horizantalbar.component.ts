@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { color } from 'echarts';
 import { NgxEchartsModule } from 'ngx-echarts';
 
 @Component({
@@ -53,7 +54,8 @@ export class HorizantalbarComponent {
         },
         barWidth: 40, // 🔥 Increased bar thickness (default was 30)
         itemStyle: {
-          borderRadius: [25, 0, 0, 25] // 🔥 More rounded edges on both ends
+          borderRadius: [0, 0, 0, 0], // 🔥 More rounded edges on both ends,
+          color:'#E1FC73',
         },
         data: [320]
       },
@@ -70,7 +72,8 @@ export class HorizantalbarComponent {
         },
         barWidth: 40, // 🔥 Increased thickness
         itemStyle: {
-          borderRadius: [0, 0, 0, 0] // 🔥 No rounding
+          borderRadius: [0, 0, 0, 0], // 🔥 No rounding
+          color:'#AACE50'
         },
         data: [120]
       },
@@ -87,7 +90,8 @@ export class HorizantalbarComponent {
         },
         barWidth: 40, // 🔥 Increased thickness
         itemStyle: {
-          borderRadius: [0, 0, 0, 0]
+          borderRadius: [0, 0, 0, 0],
+          color:'#6E991E'
         },
         data: [220]
       },
@@ -104,7 +108,8 @@ export class HorizantalbarComponent {
         },
         barWidth: 40, // 🔥 Increased thickness
         itemStyle: {
-          borderRadius: [0, 0, 0, 0]
+          borderRadius: [0, 0, 0, 0],
+          color:'#3D6811'
         },
         data: [150]
       },
@@ -121,7 +126,8 @@ export class HorizantalbarComponent {
         },
         barWidth: 40, // 🔥 Increased thickness
         itemStyle: {
-          borderRadius: [0, 25, 25, 0] // 🔥 More rounded edges on right side
+          borderRadius: [0, 25, 25, 0], // 🔥 More rounded edges on right side
+          color:'#2C3805'
         },
         data: [820]
       }
