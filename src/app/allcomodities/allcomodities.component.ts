@@ -28,8 +28,9 @@ export class AllcomoditiesComponent {
         left: 'center',
         top: 5,
         textStyle: {
-          color: '#000',
-          size: screenWidth < 768 ? '30px' : '50px',
+          color: 'green',
+          fontFamily: 'Arial',
+          size: screenWidth < 768 ? '30px' : '90px',
         }
       },
       tooltip: {
