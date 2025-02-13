@@ -81,13 +81,19 @@ export class BarchartComponent {
         {
           name: '',
           type: 'bar',
-          barWidth: 50, // Adjust bar width
+          barWidth: 60, // Adjust bar width
           data: this.data.map(value => ({
             value,
             itemStyle: { color: this.getColor(value) } // Assign dynamic color based on value
           })),
           markPoint: { 
-            color:'#AACE50',// Set markPoint shape to rectangle// Adjust markPoint size
+            Symbol: 'rect',
+            symbolSize: [80, 80],
+            itemStyle: {
+              shadowBlur: 3, // Add a shadow effect
+              borderWidth: 2, // Border width
+            },
+            color:'#AACE50',
             data: this.markPointData
           }
         }
