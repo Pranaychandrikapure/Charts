@@ -1,8 +1,33 @@
+.chart {
+  width: 100%; /* Ensure the container takes full width */
+  height: 400px; /* Set a fixed height or use min-height */
+  max-width: 800px; /* Optional: Limit the maximum width */
+  margin: 0 auto; /* Center the container */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background-color: #f9f9f9; /* Optional: Add a background for debugging */
+}
 
+echarts {
+  display: block;
+  width: 40rem; /* Make width responsive */
+  height: 100%; /* Make height responsive */
+  min-height: 300px; /* Minimum height to avoid collapsing */
+}
+
+@media (max-width: 800px) {
   echarts {
-    display: block;
-    width: 50rem;
-    height: 45%;  /* Set a fixed height */
-    min-height: 100%; /* Avoid zero height issues */
-    overflow: hidden;
+    height: 350px; /* Adjust height for smaller screens */
   }
+  
+}
+
+@media (max-width: 480px) {
+  echarts {
+    height: 250px; /* Adjust height for very small screens */
+  }
+}

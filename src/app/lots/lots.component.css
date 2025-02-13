@@ -19,7 +19,7 @@
     padding: 1.5rem;
     width: 100%;
     max-width: 60rem; /* Fixed width */
-    height: 400px; /* Adjust as per content */
+    height: 100%; /* Adjust as per content */
     flex-shrink: 0; /* Prevent shrinking */
 }
 .component-graph {
@@ -28,7 +28,7 @@
     justify-content: center;
     align-items: right;
     background: #f9fafb;
-    height: 100px;
+    height: 100% ;
     border-radius: 0.5rem;
     padding: 1.5rem;
 }
@@ -107,7 +107,10 @@
     color: #ef4444;
 }
 .component-graph{
-    width: 80%;
+    width: 100%;
     height: 400px;
     overflow: hidden;
+}
+.wrapper{
+    display: flex;
 }
