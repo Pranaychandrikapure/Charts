@@ -1,0 +1,84 @@
+echarts {
+    display: block;
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+  }
+  
+.chart-container {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .chart-wrapper {
+    flex: 1 1 50%;
+    min-width: 300px;
+    box-sizing: border-box;
+  }
+  
+  .charttitle {
+    color: #1B5F1B;
+    font-family: 'RoxboroughCF';
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+
+  
+.legend {
+    text-align: center;
+    margin-top: 10px;
+    background-color: aliceblue;
+    padding-bottom: 10px;
+    padding-top: 1px;
+    border-radius: 10px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.legend h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #002d20;
+}
+
+.legend-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legend-list li {
+    display: flex;
+    align-items: center;
+    margin: 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #005452;
+}
+
+
+
+/* ✅ Blue dot before each legend item */
+.legend-list li::before {
+    content: "•"; /* Unicode bullet point */
+    color: #0054ad; /* Blue color */
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+}

@@ -1,0 +1,27 @@
+<div class="chart-container">
+    <div class="chart-wrapper">
+      <p class="charttitle text-primary">
+        Top 10 Commodities Outside States (SSB)
+      </p>
+      <echarts [options]="chartOptions" [autoResize]="true"></echarts>
+    </div>
+  
+    <!-- ✅ Dynamic Legend Section (Shows Labels & Values Horizontally) -->
+    <div class="legend">
+      <h5>Legends</h5>
+      <ul class="legend-list">
+        <li>Jan - 2000</li>
+        <li>Feb - 4000</li>
+        <li>Mar - 6000</li>
+        <li>Apr - 8000</li>
+        <li>May - 10000</li>
+        <li>Jun - 12000</li>
+        <li>Jul - 14000</li>
+        <li>Aug - 16000</li>
+        <li>Sep - 18000</li>
+      </ul>
+    </div>
+  </div>
+  
+  <router-outlet></router-outlet>
+  
