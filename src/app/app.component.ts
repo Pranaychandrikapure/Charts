@@ -10,11 +10,12 @@ import { CollectionmarketComponent } from './collectionmarket/collectionmarket.c
 import { AllcomoditiesComponent } from './allcomodities/allcomodities.component';
 import { LotsComponent } from './lots/lots.component';
 import { OutSideStatsComponent } from './outside-stats/outside-stats.component';
+import { BarraceComponent } from './barrace/barrace.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NgxEchartsModule, BarchartComponent, HorizantalbarComponent,PiechartComponent,LegendsgraphComponent,CollectionmarketComponent,AllcomoditiesComponent,LotsComponent,OutSideStatsComponent],
+  imports: [CommonModule, RouterOutlet, NgxEchartsModule, BarchartComponent, HorizantalbarComponent,PiechartComponent,LegendsgraphComponent,CollectionmarketComponent,AllcomoditiesComponent,LotsComponent,OutSideStatsComponent,BarraceComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
